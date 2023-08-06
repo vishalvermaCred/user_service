@@ -25,8 +25,8 @@ async def _user_signup(
     profile_picture=Form(None, description="profile picture of user"),
 ):
     """
-    this api stores user details in postgres
-    it stores profile picture in profile table in postgres and rest details in users table in postgres
+    this API stores user details in Postgres
+    it stores the profile picture in the profile table in Postgres and the rest details in the users table in Postgres
     """
     logger.info(f"{LOGGER_KEY}._user_signup")
     kwargs = {
@@ -43,8 +43,8 @@ async def _user_signup(
 @router.get("/user_details")
 async def _fetch_user_details(user_id: str = None, username: str = None, email: EmailStr = None, phone: str = None):
     """
-    this api fetches user details in postgres
-    it fetches profile picture from profile table in postgres and rest details from users table in postgres with join
+    this API fetches user details in Postgres
+    it fetches the profile picture from the profile table in Postgres and the rest details from the users table in Postgres with join
     """
     logger.info(f"{LOGGER_KEY}._fetch_user_details")
     if not (user_id or username or email or phone):
@@ -65,8 +65,8 @@ async def _user_signup_v2(
     profile_picture=Form(None, description="profile picture of user"),
 ):
     """
-    this api stores user details in postgres and mongoDB
-    it profile picture in profile_mongo table in mongoDB and rest details in users_mongo table in postgres
+    this API stores user details in Postgres and MongoDB
+    it stores the profile picture in the profile_mongo table in MongoDB and the rest details in the users_mongo table in Postgres
     """
     logger.info(f"{LOGGER_KEY}._user_signup_v2")
     kwargs = {
@@ -83,8 +83,8 @@ async def _user_signup_v2(
 @router.get("/user_details/v2")
 async def _fetch_user_details_v2(user_id: str = None, username: str = None, email: EmailStr = None, phone: str = None):
     """
-    this api fetches user details in postgres
-    it fetches profile picture from profile_mongo table in mongoDB and rest details from users_mongo table in postgres
+    this API fetches user details in Postgres
+    it fetches the profile picture from the profile_mongo table in MongoDB and the rest details from the users_mongo table in Postgres
     """
     logger.info(f"{LOGGER_KEY}._fetch_user_details_v2")
     if not (user_id or username or email or phone):

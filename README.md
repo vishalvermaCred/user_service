@@ -3,7 +3,7 @@ This service is used to store the user details while signing up on a website
 
 this service contains 4 APIs in total
 
-**routes information:** 
+**routes information:**
 <br/>
 /user/signup
 this API stores user details in Postgres
@@ -24,6 +24,6 @@ it fetches the profile picture from the profile_mongo table in MongoDB and the r
 
 **steps to run**
 <br/>
-create a .env file following the .env_example file
+create a .env file following the .env.example file
 start the uvicorn server by running the command: uvicorn app.server:app
 start using the APIs
