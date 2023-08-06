@@ -19,6 +19,8 @@ USER_DB = {
     "USER": getenv("USER_DB_USER"),
 }
 
+MONGO_URI = getenv("MONGO_URI", "mongodb://localhost:27017/")
+
 REDIS_CONFIG = {
     "HOST": getenv("REDIS_HOST", "localhost"),
     "PORT": getenv("REDIS_PORT", "6379"),
